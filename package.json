@@ -4,7 +4,9 @@
     "description": "Curso webpack Platzi",
     "main": "index.js",
     "scripts": {
-        "build:dev": "webpack"
+        "build:dev": "webpack",
+        "build:prod": "webpack --config webpack.config.prod.js"
+
     },
     "keywords": [
         "webpack",
