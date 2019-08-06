@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/precios/precios.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
+/***/ "./src/pages/precios/precios.js":
+/*!**************************************!*\
+  !*** ./src/pages/precios/precios.js ***!
+  \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$title = document.querySelector('#title')\r\ntitle.innerHTML = \"Home\";\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("$title = document.querySelector('#title')\r\ntitle.innerHTML = \"Precio\";\n\n//# sourceURL=webpack:///./src/pages/precios/precios.js?");
 
 /***/ })
 

@@ -81,19 +81,19 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/pages/about/about.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
+/***/ "./src/pages/about/about.js":
+/*!**********************************!*\
+  !*** ./src/pages/about/about.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("$title = document.querySelector('#title')\r\ntitle.innerHTML = \"Home\";\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("$title = document.querySelector('#title')\r\ntitle.innerHTML = \"About\";\n\n//# sourceURL=webpack:///./src/pages/about/about.js?");
 
 /***/ })
 

@@ -1,2 +1,2 @@
 $title = document.querySelector('#title')
-title.innerHTML = "Home";
+title.innerHTML = "Precio";

@@ -5,7 +5,9 @@
     "main": "index.js",
     "scripts": {
         "build:dev": "webpack",
-        "build:prod": "webpack --config webpack.config.prod.js"
+        "build:prod": "webpack --config webpack.config.prod.js",
+        "build:multi": "webpack --config webpack.config.multi.js"
+
 
     },
     "keywords": [
