@@ -1,0 +1,17 @@
+{
+  "name": "curso-webpack",
+  "version": "1.0.0",
+  "description": "Curso webpack Platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "javascript",
+    "config",
+    "webpack"
+  ],
+  "author": "Emiliano Durán",
+  "license": "ISC"
+}
