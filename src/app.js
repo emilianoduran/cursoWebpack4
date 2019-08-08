@@ -1,2 +1,5 @@
-$title = document.querySelector('#title')
+import '../src/css/styles.css';
+
+
+const $title = document.querySelector('#title')
 title.innerHTML = "Home";

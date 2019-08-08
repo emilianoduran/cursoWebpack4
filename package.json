@@ -7,8 +7,6 @@
         "build:dev": "webpack",
         "build:prod": "webpack --config webpack.config.prod.js",
         "build:multi": "webpack --config webpack.config.multi.js"
-
-
     },
     "keywords": [
         "webpack",
@@ -19,6 +17,8 @@
     "author": "@emilianodurancito",
     "license": "ISC",
     "devDependencies": {
+        "css-loader": "3.2.0",
+        "style-loader": "1.0.0",
         "webpack": "4.39.1",
         "webpack-cli": "3.3.6"
     }
