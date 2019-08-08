@@ -1,5 +1,7 @@
 import '../src/css/styles.css';
 
 
-const $title = document.querySelector('#title')
-title.innerHTML = "Home";
+let $title = document.querySelector('#title')
+$title.innerHTML = "Home";
+
+console.log('cargando webpack')
