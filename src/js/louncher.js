@@ -1,10 +1,13 @@
-import '../css/styles.css'
-import changeText from './changeText';
-import search from './search';
+import "../css/styles.css";
+import React from "react";
+import { render } from "react-dom";
+import App from "./components/app";
 
 function louncher() {
-    console.log('🚀 louncher 🚀');
-    changeText();
-    search();
+  console.log("🚀 louncherr 🚀");
+  // código react
+
+  // @ts-ignore
+  render(<App />, document.querySelector(".container"));
 }
-export default louncher
+export default louncher;
