@@ -1,15 +1,18 @@
-function changeText() {
+import search from './search'
+import render from './render';
+
+const changeText = () => {
     let $title = document.querySelector('#title')
-    $title.innerHTML = "Un cambio externo al louncher y se actualiza el HMR";
+    $title.innerHTML = "Pokemon";
 
-    class Persona {
-        constructor(name) {
-            this.name = name;
-        }
-    }
-
-    const emiliano = new Persona('Emiliano')
-    $title.innerHTML = emiliano.name;
+    const id = prompt('Quien es ese pokemonn');
+    search(id)
+        .then((data) => {
+            render(data)
+        })
+        .catch(() => {
+            console.log('err');
+        })
 
 }
-export default changeText
+export default changeText;
