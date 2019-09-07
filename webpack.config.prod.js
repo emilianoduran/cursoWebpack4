@@ -1,35 +1,36 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'production',
-    entry: path.resolve(__dirname, './src/app.js'),
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].js'
+    entry: {
+        main: path.resolve(__dirname, './src/app.js')
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Webpack starter project',
-            template: path.resolve('./src/index.html')
-        }),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
-            chunkFilename: '[id].css',
-            ignoreOrder: false, // Enable to remove warnings about conflicting order
-
-        })
-
-    ],
+    output: {
+        filename: 'js/[name].js',
+        path: path.resolve(__dirname, 'dist')
+    },
     module: {
         rules: [{
             test: /\.css$/,
             use: [{
                     loader: MiniCssExtractPlugin.loader
                 },
-                'css-loader',
-            ],
-        }],
+                'css-loader'
+            ]
+
+        }]
+
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'nuevo test',
+            template: path.resolve(__dirname, './src/index.html'),
+
+        }),
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].css'
+        })
+    ]
 }
