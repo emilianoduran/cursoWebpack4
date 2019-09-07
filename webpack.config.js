@@ -15,7 +15,7 @@ module.exports = {
         port: 4300,
         open: true,
         before(app, server, compiler) {
-            const watchFiles = ['.html'];
+            const watchFiles = ['.html']; // admine motores de plantillas como hbs o pug
 
             compiler.plugin('done', () => {
                 const changedFiles = Object.keys(compiler.watchFileSystem.watcher.mtimes);
@@ -41,8 +41,15 @@ module.exports = {
     ],
     module: {
         rules: [{
-            test: /\.css$/,
-            use: ['style-loader', 'css-loader'],
-        }],
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.js$/,
+                use: 'babel-loader', // <== mini ma configuración para babel. 
+                exclude: /node_modules/ // <== No incluye los módules de node
+
+            }
+        ],
     },
 }
