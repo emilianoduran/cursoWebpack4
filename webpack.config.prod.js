@@ -20,6 +20,13 @@ module.exports = {
       ignoreOrder: false // Enable to remove warnings about conflicting order
     })
   ],
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      minSize: 0,
+      name: "commos"
+    }
+  },
   module: {
     rules: [
       {
@@ -28,8 +35,26 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader
           },
-          "css-loader"
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1 // <== Esta configuración es necesaria para que css-loader se ejecute en segundo lugar y postcss en primero.
+            }
+          },
+          "postcss-loader"
         ]
+      },
+      {
+        test: /\.less$/,
+        use: ["style-loader", "css-loader", "less-loader"]
+      },
+      {
+        test: /\.styl$/,
+        use: ["style-loader", "css-loader", "stylus-loader"]
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.js$/,
@@ -40,7 +65,7 @@ module.exports = {
         use: {
           loader: "url-loader",
           options: {
-            limit: 90000 // <== límite máximo de un archivo para combertirlo en base64
+            limit: 9000 // <== límite máximo de un archivo para combertirlo en base64
           }
         }
       }

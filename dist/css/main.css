@@ -1,0 +1,86 @@
+body .post-css{
+        color:orange;
+        font-size: 20px !important;
+    }
+@font-face {
+    font-family: "open_sansregular";
+    src: url(ef387175ee4070780d18892de7069260.eot);
+    src: url(ef387175ee4070780d18892de7069260.eot?#iefix) format("embedded"),
+      url(c8ffdeb3144d5055756ef01ef98e8486.woff) format("woff"),
+      url(898df6ace02d47164941381c9be0a0bc.ttf) format("truetype"),
+      url(cee3b77007cf333d40311410af0f66ad.svg#open_sansregular) format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'open_sansregular', Helvetica, sans-serif;
+    background: rgb(255, 255, 255);
+    color: rgb(71, 71, 71);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container p {
+    font-size: 10px;
+    text-transform: uppercase;
+  
+}
+
+img{
+    width: 40px;
+}
+
+.wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    color: rgb(6, 95, 110)
+}
+
+button, :focus{
+    padding: 10px;
+    border-radius: 3px;
+    border:none;
+    background: rgb(243, 243, 243);
+    color:rgb(6, 95, 110);
+    margin-top: 5px;
+    box-shadow: 0px 2px 6px  rgba(0,0,0,0.1);
+    outline: none;
+    width: 100%;
+}
+
+button:hover{
+    cursor: pointer;
+    background: rgb(6, 95, 110);
+    color: white;
+    box-shadow: none;
+    box-shadow: 0px 2px 6px  rgba(0,0,0,0.1);
+
+}
+
+button:active{
+    background: rgb(7, 125, 146);
+    box-shadow: none
+}
+
+li{
+    list-style: none;
+    padding-left: 5px;
+    line-height: 30px;
+    margin: 10px 0;
+    border-bottom: 1px solid rgb(6, 95, 110);
+    color: rgb(6, 95, 110)
+}
