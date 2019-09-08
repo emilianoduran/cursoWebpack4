@@ -1,14 +1,13 @@
 import "../css/styles.css";
-import React from "react";
-import { render } from "react-dom";
-import data from "./components/data.json";
-import App from "./components/app";
+import "../css/postcss.css";
+import "../scss/styles.scss";
+import "../less/styles.less";
+import "../stylus/styles.styl";
 
 function louncher() {
   console.log("🚀 louncherr 🚀");
   // código react
-  console.log(data);
-  // @ts-ignore
-  render(<App />, document.querySelector(".container"));
+  const $title = document.getElementById("title");
+  $title.innerHTML = "Preprocesadores con webpack";
 }
 export default louncher;

@@ -45,7 +45,28 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"]
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1 // <== Esta configuración es necesaria para que css-loader se ejecute en segundo lugar y postcss en primero.
+            }
+          },
+          "postcss-loader"
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: ["style-loader", "css-loader", "less-loader"]
+      },
+      {
+        test: /\.styl$/,
+        use: ["style-loader", "css-loader", "stylus-loader"]
+      },
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.js$/,
